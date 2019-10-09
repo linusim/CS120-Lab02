@@ -1,8 +1,8 @@
 /*	Author: lim001
  *  Partner(s) Name: 
  *	Lab Section:
- *	Assignment: Lab #2  Exercise #1
- *	Exercise Description: Created a code for a garage door sensor that sets PB0 to 1 if PA1 is 0 and PA0 is 1
+ *	Assignment: Lab #2  Exercise #3
+ *	Exercise Description: Created a code for a program that outputs to port C the number of availble parking space (represented by port A pins 3 to 0). PC7 is now set to 1 if the lot is full
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
@@ -15,17 +15,27 @@
 int main(void) {
     /* Insert DDR and PORT initializations */
 	DDRA = 0x00; PORTA = 0xFF;
-	DDRB = 0xFF; PORTB = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
 
-	unsigned char tmpB  = 0x00;
+	unsigned char tmpC  = 0x00;
     /* Insert your solution below */
     while (1) {
-	if ( (PINA & 0x03) == 0x01) {
-		tmpB = 0x01;
-	} else {
-		tmpB = 0x00;
-	}	
-	PORTB = tmpB;
+	if ( (PINA & 0x08) == 0x00) {
+		tmpC += 0x01;
+	}
+	if ( (PINA & 0x04) == 0x00) {
+		tmpC += 0x01;
+	}
+	if ( (PINA & 0x02) == 0x00) {
+		tmpC += 0x01;
+	}
+	if ( (PINA & 0x01) == 0x00) {
+		tmpC += 0x01;
+	}
+	if ( PINA == 0x0F ) {
+		tmpC = tmpC | 0x80;
+	}
+	PORTC = tmpC;
 	}
     return 0;
 }
