@@ -1,8 +1,8 @@
 /*	Author: lim001
- *  Partner(s) Name: 
+ *  Partner(s) Name: FestoBwogi
  *	Lab Section:
  *	Assignment: Lab #2  Exercise #1
- *	Exercise Description: Created a code for a garage door sensor that sets PB0 to 1 if PA1 is 0 and PA0 is 1
+ *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.

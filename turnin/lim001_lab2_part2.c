@@ -1,8 +1,8 @@
 /*	Author: lim001
- *  Partner(s) Name: 
+ *  Partner(s) Name: FestoBwogi
  *	Lab Section:
  *	Assignment: Lab #2  Exercise #2
- *	Exercise Description: Created a code for a program that outputs to port C the number of availble parking space (represented by port A pins 3 to 0)
+ *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
